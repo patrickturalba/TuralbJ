@@ -2,14 +2,19 @@ package com.example.androidstudio.turalbaj;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.MotionEvent;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     DatabaseAdapter db = new DatabaseAdapter(context);
                     if (db.validateUser(userName.getText().toString(),password.getText().toString())){
                         Toast.makeText(getApplicationContext(), "Login Success!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, blank.class);
+                        Intent intent = new Intent(MainActivity.this, Ontouch.class);
                         startActivity(intent);
 
                     } else {

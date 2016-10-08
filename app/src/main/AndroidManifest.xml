@@ -15,12 +15,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DatabaseHelper" />
-        <activity android:name=".DatabaseAdapter" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Ontouch" />
-        <activity android:name=".RegisterForm" />
-        <activity android:name=".blank"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ontouch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Registerform">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>

@@ -1,8 +1,27 @@
 package com.example.androidstudio.turalbaj;
 
+
+import android.content.Context;
+import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.content.Intent;
+import android.database.Cursor;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +34,8 @@ import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Registerform extends Activity {
+
+public class Registerform extends Activity{
     EditText first, sur, user, email,pwd1,pwd2;
     Button reg;
 
@@ -120,7 +140,10 @@ public class Registerform extends Activity {
         Intent intent = new Intent(Registerform.this, MainActivity.class);
         startActivity(intent);
     }
-    public void onPause() {
+    public void onPause(){
         super.onPause();
         finish();
-    }}
+    }
+
+
+}
